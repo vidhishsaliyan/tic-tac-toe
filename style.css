@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+}
+h1{
+    margin: 3.5vmin;
+    text-decoration: underline;
+    text-decoration-color: #001011;
+}
+body{
+    background-color: #093A3E;
+    text-align: center;
+    color:white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70vh;
+    margin: 3.5vmin;
+    /* border: 2px solid black; */
+}
+.game{
+    height:59vmin;
+    width:59vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap:5px;
+    border: 2px solid black;
+    border-radius: 1.5rem;
+}
+.box{
+    height:18vmin;
+    width:18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    font-weight: 500;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    background-color: #ffffff;
+    color: black;
+    /* box-shadow: x-axis y-axis blur-radius spread color inset; */
+}
+.box:hover{
+    transform: scale(1.02);
+    background-color: #e6e6e6;
+}
+
+#reset{
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding:1em;
+    background-color: #001011;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 0.6rem #00000027;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+#reset:hover{
+    transform: scale(1.02);
+}
+
+#undo{
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding:1em;
+    background-color: #001011;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 0.6rem #00000027;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+#undo:hover{
+    transform: scale(1.02);
+}
+
+.result-msg{
+    position: absolute;
+    border: none;
+    color: white;
+    width: 10em;
+    padding:0.5em;
+    background-color: #001011ee;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 0.6rem #0000008f;
+    z-index: 1;
+    animation: result 0.5s ease-in-out;
+}
+@keyframes result {
+    from{
+        scale:0.5;
+    }
+    to{
+        scale:1;
+    }
+    
+}
+.player-track{
+    position: absolute;
+    font-size: 1rem;
+    align-self: flex-start;
+    font-family: arial;
+}
